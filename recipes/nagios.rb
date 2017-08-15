@@ -8,11 +8,11 @@ include_recipe 'apt::default'
 include_recipe 'nagios::default'
 
 nagios_command 'check_http' do
-  options 'command_line' => '$USER1$/check_http -H $HOSTADDRESS$ -w $ARG1$ -c $ARG2$ -t 20 -f $ARG3$'
+  options 'command_line' => '$USER1$/check_http -H $HOSTADDRESS$ -w 1 -c 5 -t 20 -f stickyport'
 end
 
 nagios_service 'check_http_default' do
-  options 'check_command' => 'check_http!1,5,ok',
+  options 'check_command' => 'check_http!',
           'use' => 'default-service',
           'hostgroup_name' => 'web_servers'
 end
