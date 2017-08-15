@@ -1,0 +1,9 @@
+{
+  "id": "expensify",
+  "groups": "sysadmin",
+  "htpasswd": "{SHA}akbcY1Yszg00ufvN6eODQVppKr8=",
+  "nagios": {
+    "pager": "nagiosadmin_pager@example.com",
+    "email": "nagiosadmin@example.com"
+  }
+}

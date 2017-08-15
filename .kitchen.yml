@@ -51,3 +51,4 @@ suites:
     verifier:
       inspec_tests:
       - test/smoke/default/nagios_test.rb
+    data_bags_path: "test/smoke/data_bags/"
