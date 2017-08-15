@@ -2,7 +2,7 @@
 # Cookbook:: expensify
 # Recipe:: apache
 #
-# Copyright:: 2017, The Authors, All Rights Reserved.
+# Copyright:: 2017, Justin Dugger, All Rights Reserved.
 
 include_recipe 'apt'
 
