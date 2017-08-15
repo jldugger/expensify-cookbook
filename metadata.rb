@@ -1,6 +1,6 @@
 name 'expensify'
-maintainer 'The Authors'
-maintainer_email 'you@example.com'
+maintainer 'Justin Dugger'
+maintainer_email 'jldugger@gmail.com'
 license 'All Rights Reserved'
 description 'Installs/Configures expensify'
 long_description 'Installs/Configures expensify'
@@ -18,3 +18,5 @@ chef_version '>= 12.1' if respond_to?(:chef_version)
 # a Supermarket.
 #
 # source_url 'https://github.com/<insert_org_here>/expensify'
+
+depends 'sudo'
