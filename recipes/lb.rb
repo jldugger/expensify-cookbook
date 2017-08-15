@@ -8,10 +8,10 @@ haproxy_install 'package'
 
 haproxy_config_defaults 'defaults' do
   mode 'http'
-  timeout connect: '5s',
+  timeout connect: '2s',
           client: '50s',
           server: '50s'
-  retries 3
+  retries 1
 end
 
 haproxy_frontend 'http-in' do
@@ -22,10 +22,11 @@ end
 
 haproxy_backend 'servers' do
   extra_options(
-    'stick-table' => 'type ip size 20k'
+    'stick-table' => 'type ip size 20k',
+    'option' => 'httpchk'
   )
   server [
-    'app-a 10.202.183.93:80 maxconn 32',
-    'app-b 10.226.14.201:80 maxconn 32'
+    'app-a 10.202.183.93:80 maxconn 32 check',
+    'app-b 10.226.14.201:80 maxconn 32 check'
   ]
 end
