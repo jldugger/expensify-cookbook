@@ -1,0 +1,17 @@
+AllCops:
+  Include:
+    - '**/Berksfile'
+    - '**/Cheffile'
+  Exclude:
+    - 'metadata.rb'
+    - 'Rakefile'
+
+Style/NumericLiteralPrefix:
+  EnforcedOctalStyle: zero_only
+
+Metrics/LineLength:
+  Max: 120
+
+Metrics/BlockLength:
+  Enabled: false
+
