@@ -52,3 +52,9 @@ suites:
       inspec_tests:
       - test/smoke/default/nagios_test.rb
     data_bags_path: "test/smoke/data_bags/"
+  - name: firewall_external
+    run_list:
+      - recipe[expensify::firewall_external]
+    verifier:
+      inspec_tests:
+      - test/smoke/default/firewall_external_test.rb
