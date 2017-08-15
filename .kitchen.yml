@@ -45,3 +45,9 @@ suites:
     verifier:
       inspec_tests:
       - test/smoke/default/lb_test.rb
+  - name: nagios
+    run_list:
+      - recipe[expensify::nagios]
+    verifier:
+      inspec_tests:
+      - test/smoke/default/nagios_test.rb
