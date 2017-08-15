@@ -23,6 +23,7 @@ end
 haproxy_backend 'servers' do
   extra_options(
     'stick-table' => 'type ip size 20k',
+    'stick' => 'on src',
     'option' => 'httpchk'
   )
   server [
