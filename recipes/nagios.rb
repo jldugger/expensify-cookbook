@@ -32,11 +32,11 @@ end
 nagios_host 'appa.pwnguin.net' do
   options 'use'           => 'generichosttemplate',
           'host_name'     => 'appa',
-          'address'       => '54.177.50.202'
+          'address'       => '10.202.183.93'
 end
 
 nagios_host 'appb.pwnguin.net' do
   options 'use'           => 'generichosttemplate',
           'host_name'     => 'appb',
-          'address'       => '54.219.249.39'
+          'address'       => '10.226.14.201'
 end
