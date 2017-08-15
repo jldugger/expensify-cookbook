@@ -25,7 +25,7 @@ haproxy_backend 'servers' do
     'stick-table' => 'type ip size 20k'
   )
   server [
-    'app-a 54.177.50.202:80 maxconn 32',
-    'app-b 54.219.249.39:80 maxconn 32'
+    'app-a 10.202.183.93:80 maxconn 32',
+    'app-b 10.226.14.201:80 maxconn 32'
   ]
 end
