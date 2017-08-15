@@ -12,3 +12,5 @@ issues_url 'https://github.com/jldugger/expensify-cookbook/issues'
 source_url 'https://github.com/jldugger/expensify-cookbook'
 
 depends 'sudo'
+depends 'apache2'
+depends 'apt'

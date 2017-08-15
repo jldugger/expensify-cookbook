@@ -2,6 +2,11 @@
 driver:
   name: vagrant
 
+driver_config:
+  network:
+  - ["forwarded_port", {guest: 80, host: 8080}]
+  - ["forwarded_port", {guest: 443, host: 8443}]
+
 provisioner:
   name: chef_zero
   # You may wish to disable always updating cookbooks in CI or other testing environments.
@@ -22,4 +27,15 @@ suites:
     verifier:
       inspec_tests:
         - test/smoke/default
-    attributes:
+  - name: app_a
+    run_list:
+      - recipe[expensify::app_a]
+    verifier:
+      inspec_tests:
+      - test/smoke/default/app_a_test.rb
+  - name: app_b
+    run_list:
+      - recipe[expensify::app_b]
+    verifier:
+      inspec_tests:
+      - test/smoke/default/app_b_test.rb
