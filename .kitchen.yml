@@ -26,7 +26,7 @@ suites:
       - recipe[expensify::default]
     verifier:
       inspec_tests:
-        - test/smoke/default
+        - test/smoke/default/default_test.rb
   - name: app_a
     run_list:
       - recipe[expensify::app_a]
