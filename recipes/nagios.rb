@@ -19,7 +19,7 @@ end
 
 nagios_hostgroup 'web_servers' do
   options 'alias'   => 'All webapp servers',
-          'members' => 'appa, appb'
+          'members' => 'challenge-1, challenge-2'
 end
 
 nagios_host 'generichosttemplate' do
@@ -27,16 +27,4 @@ nagios_host 'generichosttemplate' do
           'name'           => 'generichosttemplate',
           'register'       => 0,
           'check_interval' => 10
-end
-
-nagios_host 'appa.pwnguin.net' do
-  options 'use'           => 'generichosttemplate',
-          'host_name'     => 'appa',
-          'address'       => '10.202.183.93'
-end
-
-nagios_host 'appb.pwnguin.net' do
-  options 'use'           => 'generichosttemplate',
-          'host_name'     => 'appb',
-          'address'       => '10.226.14.201'
 end
