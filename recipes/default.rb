@@ -4,6 +4,10 @@
 #
 # Copyright:: 2017, Justin Dugger, All Rights Reserved.
 
+%w[htop httping traceroute mtr-tiny].each do |pkg|
+  package pkg
+end
+
 user 'expensify' do
   comment 'a simple user'
   manage_home true
