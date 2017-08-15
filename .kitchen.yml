@@ -39,3 +39,9 @@ suites:
     verifier:
       inspec_tests:
       - test/smoke/default/app_b_test.rb
+  - name: lb
+    run_list:
+      - recipe[expensify::lb]
+    verifier:
+      inspec_tests:
+      - test/smoke/default/lb_test.rb
