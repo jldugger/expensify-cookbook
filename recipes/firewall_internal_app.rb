@@ -17,5 +17,6 @@ end
 firewall_rule 'ssh' do
   port     22
   protocol :tcp
+  source   '54.176.67.60/32'
   command  :allow
 end
