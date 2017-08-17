@@ -64,3 +64,9 @@ suites:
     verifier:
       inspec_tests:
       - test/smoke/default/firewall_internal_app_test.rb
+  - name: firewall_internal_lb
+    run_list:
+      - recipe[expensify::firewall_internal_lb]
+    verifier:
+      inspec_tests:
+      - test/smoke/default/firewall_internal_lb_test.rb
