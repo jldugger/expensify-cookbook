@@ -29,6 +29,7 @@ suites:
         - test/smoke/default/default_test.rb
   - name: app_a
     run_list:
+      - recipe[expensify::default]
       - recipe[expensify::app_a]
       - recipe[expensify::firewall_internal_app]
     verifier:
@@ -36,6 +37,7 @@ suites:
       - test/smoke/default/app_a_test.rb
   - name: app_b
     run_list:
+      - recipe[expensify::default]
       - recipe[expensify::app_b]
       - recipe[expensify::firewall_internal_app]
     verifier:
@@ -43,6 +45,7 @@ suites:
       - test/smoke/default/app_b_test.rb
   - name: lb
     run_list:
+      - recipe[expensify::default]
       - recipe[expensify::lb]
       - recipe[expensify::firewall_internal_lb]
     verifier:
@@ -50,6 +53,7 @@ suites:
       - test/smoke/default/lb_test.rb
   - name: nagios
     run_list:
+      - recipe[expensify::default]
       - recipe[expensify::nagios]
       - recipe[expensify::firewall_external]
     verifier:
