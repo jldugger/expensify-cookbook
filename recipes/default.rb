@@ -25,7 +25,8 @@ group 'sysadmin' do
   members 'expensify'
 end
 
-node.default['sudo']['passwordless'] = true
+node.default['authorization']['sudo']['passwordless'] = true
+node.default['authorization']['sudo']['users'] = ['expensify']
 node.default['authorization']['sudo']['agent_forwarding'] = true
-
-# include_recipe 'sudo'
+node.default['authorization']['sudo']['include_sudoers_d'] = true
+include_recipe 'sudo'
